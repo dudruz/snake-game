@@ -24,16 +24,19 @@ function generateFood() {
 }
 
 function setDirection(event) {
-    if (event.keyCode === 37 && direction !== 'RIGHT') {
+    const key = event.key.toUpperCase(); // Para lidar com teclas maiúsculas e minúsculas uniformemente
+
+    if ((key === 'ARROWLEFT' || key === 'A') && direction !== 'RIGHT') {
         direction = 'LEFT';
-    } else if (event.keyCode === 38 && direction !== 'DOWN') {
+    } else if ((key === 'ARROWUP' || key === 'W') && direction !== 'DOWN') {
         direction = 'UP';
-    } else if (event.keyCode === 39 && direction !== 'LEFT') {
+    } else if ((key === 'ARROWRIGHT' || key === 'D') && direction !== 'LEFT') {
         direction = 'RIGHT';
-    } else if (event.keyCode === 40 && direction !== 'UP') {
+    } else if ((key === 'ARROWDOWN' || key === 'S') && direction !== 'UP') {
         direction = 'DOWN';
     }
 }
+
 
 function resetGameOnGameOver(event) {
     if (gameOverElement.style.display === 'block') {
