@@ -26,13 +26,13 @@ function generateFood() {
 function setDirection(event) {
     const key = event.key.toUpperCase(); // Para lidar com teclas maiúsculas e minúsculas uniformemente
 
-    if ((key === 'ARROWLEFT' || key === 'A') && direction !== 'RIGHT') {
+    if ((key === 'ARROWLEFT' || key === 'a') && direction !== 'RIGHT') {
         direction = 'LEFT';
-    } else if ((key === 'ARROWUP' || key === 'W') && direction !== 'DOWN') {
+    } else if ((key === 'ARROWUP' || key === 'w') && direction !== 'DOWN') {
         direction = 'UP';
-    } else if ((key === 'ARROWRIGHT' || key === 'D') && direction !== 'LEFT') {
+    } else if ((key === 'ARROWRIGHT' || key === 'd') && direction !== 'LEFT') {
         direction = 'RIGHT';
-    } else if ((key === 'ARROWDOWN' || key === 'S') && direction !== 'UP') {
+    } else if ((key === 'ARROWDOWN' || key === 's') && direction !== 'UP') {
         direction = 'DOWN';
     }
 }
